@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta name="description" content="" />
+        <meta name="keywords" content=""/>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    </head>
+
+    <body>
+	<nav id='menu'>
+	<ul class="menuTemplate3 decor3_1">
+    <li><a href="#" class="arrow">Кардиотренажеры</a>
+        <div class="drop decor3_2" style="width: 430px;">
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Орбитреки</span></a><br />
+                </div>
+				<div>
+					<a href="#"><img src="../img/demo/hd7.png" /><span>Беговые дорожки</span></a><br />
+                </div>    
+            </div>
+            <div class='left'>
+                <div>
+                    <a href="http://www.sporteffect.com.ua/velotrenajeryi/"><img src="../img/demo/hd7.png" /><span>Велотренажеры</span></a><br />
+                </div>
+				<div>
+				<a href="#"><img src="../img/demo/hd7.png" /><span>Гребля и степперы</span></a>
+                </div>
+            </div>
+            <div style='clear: both;'></div>
+        </div>
+    </li>
+	<li class="separator"></li>
+
+	<li><a href="#" class="arrow">Силовые тренажеры и фитнесс</a>
+        <div class="drop decor3_2 dropToLeft2" style="width: 440px;">
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Фитнесс станции</span></a><br />
+                </div>
+				<div>
+					<a href="#"><img src="../img/demo/hd7.png"/><span>Штанги и гантели</span></a><br />
+                </div>    
+            </div>
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Скамьи и стойки</span></a><br />
+                </div>
+				<div>
+				<a href="#"><img src="../img/demo/hd7.png" /><span>Скамьи для пресса</span></a>
+                </div>
+            </div>
+            <div style='clear: both;'></div>
+        </div>
+    </li>
+	<li class="separator"></li>
+	<li><a href="#" class="arrow">Здоровье и красота</a>
+        <div class="drop decor3_2 dropToLeft2" style="width: 430px;">
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Вибромассажеры</span></a><br />
+                </div>
+				<div>
+					<a href="#"><img src="../img/demo/hd7.png" /><span>Массажные столы</span></a><br />
+                </div>    
+            </div>
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Шведские стенки</span></a><br />
+                </div>
+            </div>
+            <div style='clear: both;'></div>
+        </div>
+    </li>
+    <li class="separator"></li>
+    <li><a href="#" class="arrow">Детские спортивные комплексы</a>
+        <div class="drop decor3_2 dropToLeft2" style="width: 550px;">
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Детские спортивные комплексы</span></a><br />
+                </div>
+				<div>
+					<a href="#"><img src="../img/demo/hd7.png" /><span>Дополнительное оборудование</span></a><br />
+                </div>    
+            </div>
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Детские уголки</span></a><br />
+                </div>
+				<div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Детские тренажеры</span></a><br />
+                </div>
+            </div>
+            <div style='clear: both;'></div>
+        </div>
+    </li>
+    <li class="separator"></li>
+    <li><a href="#" class="arrow">Спортинвентарь</a>
+        <div class="drop decor3_2 dropToLeft2" style="width: 340px;">
+            <div class='left'>
+                <div>
+                    <a href="#"><img src="../img/demo/hd7.png" /><span>Теннисные столы</span></a><br />
+                </div>
+				<div>
+					<a href="#"><img src="../img/demo/hd7.png" /><span>Спортивное питание</span></a><br />
+                </div>    
+            </div>
+           
+            <div style='clear: both;'></div>
+        </div>
+    </li>
+	<li class="separator"></li>
+	<li><a href="#" class="arrow">Контакты</a></li>
+	</ul>
+	</nav>
+    </body>
+	<script>
+			$(document).ready(function () {
+			$('.menuTemplate3 li').on('click', function() {
+				if($(this).children('.drop').hasClass('dropToLeft2')){
+					$(this).children('a').toggleClass('grey');
+					$('a').not($(this).children('a')).removeClass('grey');
+					$(this).children('.dropToLeft2').css({'right' : '-60px', 'left':'auto', 'background':'#e1cdf7', 'border-bottom':'0px'}).toggle();
+					$('.drop').not($(this).children('.dropToLeft2')).hide();
+					
+
+				}
+				else {
+				console.log(this);
+					$(this).children('.drop').css({'left' : '-1px', 'background':'#e1cdf7'}).toggle();
+					$('.dropToLeft2').hide();
+					$(this).children('a').toggleClass('grey');
+					$('a').not($(this).children('a')).removeClass('grey');
+				}
+				
+			});
+			
+	});
+	</script>
+</html>
